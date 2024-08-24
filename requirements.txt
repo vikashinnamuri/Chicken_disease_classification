@@ -1,17 +1,17 @@
 tensorflow
 pandas 
-dvc
+dvc   # data version control
 notebook
 numpy
 matplotlib
 seaborn
 python-box==6.0.2
-pyYAML
+pyYAML  # used to read the YAML file using python
 tqdm
 ensure==1.0.2
 joblib
 types-PyYAML
 scipy
-Flask
+Flask   # web develpement
 Flask-Cors
--e .
+-e .   # used for setup mathod
