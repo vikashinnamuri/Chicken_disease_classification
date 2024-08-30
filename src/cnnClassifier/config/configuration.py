@@ -1,9 +1,11 @@
 from src.cnnClassifier.constants import *
+from pathlib import Path
 from src.cnnClassifier.utils.common import read_yaml,create_directories   # used to read the yaml file and create the dict
 from src.cnnClassifier.entity.config_entity import (DataIngestionConfig,
                                                     PrepareBaseModelConfig,
                                                     PrepareCallbacksConfig,
-                                                    TrainingConfig)
+                                                    TrainingConfig,
+                                                    EvalutionConfig)
 import os
 
 
@@ -85,3 +87,14 @@ class ConfigurationManager:
         )
 
         return training_config
+    
+    def get_validation_config(self)->EvalutionConfig:
+        eval_config=   EvalutionConfig(
+            path_of_model=Path("artifacts/training/model.h5"),
+            tranining_data=Path("artifacts/data_ingestion/Chicken-fecal-images"),
+            all_params=self.params,
+            params_image_size=self.params.IMAGE_SIZE,
+            params_batch_size=self.params.BATCH_SIZE
+            
+        )
+        return eval_config
