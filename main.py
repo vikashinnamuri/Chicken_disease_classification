@@ -38,10 +38,10 @@ except Exception as e :
             
 STAGE_NAME="Evalution stage"
 try:
-    logger.info(f">>>>> stage {stage_name} started <<<<<")
+    logger.info(f">>>>> stage {STAGE_NAME} started <<<<<")
     obj=EvalutionPipeline()
     obj.main()
-    logger.info(f"<<<<<<<< stage {stage_name} completed >>>>>>>")
+    logger.info(f"<<<<<<<< stage {STAGE_NAME} completed >>>>>>>")
 except Exception as e :
     logger.exception(e)
     raise e            
