@@ -2,7 +2,7 @@ AUGMENTATION: False
 IMAGE_SIZE : [224,224,3]
 BATCH_SIZE: 16
 INCLUDE_TOP: False
-EPOCHS: 7 #based on this the losse will decrease
+EPOCHS: 5 #based on this the losse will decrease
 CLASSES: 2 #two types of data sets of '2'
 WEIGHTS: imagenet
 LEARNING_RATE: 0.01
