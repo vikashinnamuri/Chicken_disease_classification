@@ -44,8 +44,8 @@ def predictRoute():
         
 if __name__=="__main__":
     clApp=Clinetapp()
-   # app.run(host='0.0.0.0',port=8080) # local
-    app.run(host='0.0.0.0',port=80) #azure
+    app.run(host='0.0.0.0',port=8080) # local
+   # app.run(host='0.0.0.0',port=80) #azure
             
         
 
